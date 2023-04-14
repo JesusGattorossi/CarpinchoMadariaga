@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /*1 rem = 10px*/ 
+    background-image: url(./imagenes/logo.jpg);
+}
+*, *:before, *:after {
+    box-sizing: inherit;  /*hereda las propiedades de su padre*/
+}
+/* CONFIGURACION GENERAL*/
+#titulo1{
+    font-size: 50px;
+    background-color: #a0f33386;
+    border: double;
+    text-align: center;
+    color: rgb(9, 9, 238); 
+}
+h2{
+    background-color: rgba(188, 243, 59, 0.8);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:40px;
+}
+#parrafoSubtitulo{
+    font-size: 20px;
+    background-color: rgba(180, 164, 20, 0.8);
+    border: double 5px;
+}
+/*CONFIGURACIONES PARTICULARES*/
+#logo{
+    width: 20%;
+    
+}
+#bancoPrueba{
+    width: 25%;
+}
+p{
+    font-size: larger;
+    font-weight: 400;
+}
+#careta{
+   width: 15%;
+}
+#tabla{
+    width: 25%;
+}
+.imagenes{
+    display: inline-block;
+}
