@@ -9,6 +9,7 @@ html {
 /* CONFIGURACION GENERAL*/
 
 #titulo1{
+    border-radius: 20%;
     font-size: 50px;
     background-color: #a0f33386;
     border: double 15px rgb(206, 109, 30);
@@ -69,8 +70,17 @@ video{
     border: double rgba(22, 233, 222, 0.603) 25px;
 }
 #textoVideo{
-    border-bottom: 2px dotted black;
+    color: indigo;
+    border: 8px dotted rgb(39, 245, 12);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
     background-color: antiquewhite ;
+}
+li{
+    color: rgb(226, 13, 13);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:  30px;
+}
+a{
+    color:rgb(108, 5, 177)
 }
