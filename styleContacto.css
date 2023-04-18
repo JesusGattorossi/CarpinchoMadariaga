@@ -1,20 +1,41 @@
 body{
-    background-color:  rgb(188, 224, 27);
+    background-color:  rgb(179, 57, 19);
 }
 
 h3{text-align: center;
-    background-color: blueviolet;
+    background-color: rgb(112, 212, 86);
     color: black;
     border-color: darkred 15px;
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
 }
 li{
-    color: red;
+    color: rgb(184, 158, 13);
     font-size: 35px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-border: 8px dashed;
+    border: 8px dashed;
 }
 li:hover{
-    color:forestgreen
+    color:rgb(16, 30, 155)
+}
+.subtitulo{
+    font-size: 29px ;
+    border-top: 25%;
+    color: blue;
+    font-family: sans-serif;
+}
+#insta{
+    width: 3%;
+}
+#face{
+    width: 3%;
+}
+#whatsapp{
+    width: 5%;
+}
+.mapa{
+    background-color: brown;
+   text-align: center;
+   border:  solid 15px yellowgreen;
+   justify-content: center;
 }

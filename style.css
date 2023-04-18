@@ -9,6 +9,9 @@ html {
 /* CONFIGURACION GENERAL*/
 
 #titulo1{
+    text-shadow:  3px 3px 1px red;
+    5px 5px 2px yellow;
+    8px 8px 3px blue;
     border-radius: 20%;
     font-size: 50px;
     background-color: #a0f33386;
