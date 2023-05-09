@@ -1,23 +1,29 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;  /*1 rem = 10px*/ 
-    background-image: url(./imagenes/logo.jpg);
+    background-image: url(./imagenes/prueba\ banco.jpg);
+    
 }
 *, *:before, *:after {
     box-sizing: inherit;  /*hereda las propiedades de su padre*/
 }
 /* CONFIGURACION GENERAL*/
-
+head{
+    
+}
 #titulo1{
-    text-shadow:  3px 3px 1px red;
-    5px 5px 2px yellow;
-    8px 8px 3px blue;
+    text-shadow:  8px 5px 5px rgb(239, 243, 17);
     border-radius: 20%;
-    font-size: 50px;
-    background-color: #a0f33386;
+    font-size: 5rem;
+    background-image: url(./imagenes/logo.jpg);
     border: double 15px rgb(206, 109, 30);
     text-align: center;
     color: rgb(9, 9, 238); 
+    
+}
+.solapa{
+    background-image: url(./imagenes/tablas.jpg); 
+    border: double 15px rgb(224, 15, 15) 5px ;
 }
 h2{
     background-color: rgba(188, 243, 59, 0.8);
@@ -26,16 +32,17 @@ h2{
 }
 #parrafoSubtitulo{
     font-size: 20px;
-    background-color: rgba(180, 164, 20, 0.8);
+    background-color: rgba(25, 180, 20, 0.8);
     border: double 5px;
+    
 }
 /*CONFIGURACIONES PARTICULARES*/
-#logo{
+.logo{
     width: 20%;  
     border-radius: 20% ;
     border: dotted 10px;
 }
-#bancoPrueba{
+.bancoPrueba{
     width: 25%;
     border-radius: 20%;
     border:groove blue;
@@ -50,23 +57,27 @@ p{
    border-radius: 35%;
    
 }
-#tabla{
+.tabla{
     width: 25%;
     border-radius: 20%;
     border-color:purple ;
 }
-#chulengo{
+.chulengo{
     width: 20%;
     border:inset 10px;
 }
 .imagenes{
-    display : inline-block;
+   
 }
-h3{
-    color: rgb(194, 7, 7);
+h3{ 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:  40px;
+    font-weight: bold;
+    color: rgb(194, 50, 238);
     border: dotted blue 10px ;
     text-align: center;
-    font-size: 40px;
+    
+    
 }
 video{
     border-radius: 15%;
@@ -85,9 +96,9 @@ li{
     font-size:  30px;
 }
 a{
-    color:rgb(108, 5, 177)
+    color:rgb(8, 39, 218)
 }
-#CONTACTO{
+.boton :hover{
+    border-radius: 15px;
     background-color: aqua;
-    font-size: 25%;
 }
