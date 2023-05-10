@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./imagenes/icono.ico">
-    <link rel="stylesheet" href="./contacto.html">
-    <link rel="stylesheet" href="./ubicacion.html">
-
+    <link rel="stylesheet" href="../Carpincho Madariaga/pages/contacto.html">
+    <link rel="stylesheet" href="./pages/ubicacion.html">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/eb3c38dd60.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
@@ -17,17 +19,19 @@
 </head>
 
 <body>
-    <div id="titulo1">
-        <h1><u>CARPINCHO MADARIAGA </u></h1> <br>
-    </div> <br>
-    <div class="solapa">
-        <li><a href="contacto.html" target="_blank">Contacto y redes sociales</a></li><br>
-        <li><a href="ubicacion.html" target="_blank"> Ubicacion</a></li>
-
-        <center>
-            <img id="careta" src="imagenes/careta.jpg" alt="careta carpincho">
-        </center>
+    <header>
+        <div id="titulo1">
+            <h1><u>CARPINCHO MADARIAGA </u></h1> <br>
+        </div> <br>
         <h2>Trabajos a medida en hierro y madera, estilo industrial!!!</h2><br>
+        <div class="solapa">
+            <li><a href="./pages/contacto.html" target="_blank">Contacto y redes sociales</a></li><br>
+            <li><a href="./pages/ubicacion.html" target="_blank"> Ubicacion</a></li>
+    
+    <center>
+        <img id="careta" src="imagenes/careta.jpg" alt="careta carpincho">
+    </center>
+    </header>
     </div>
     <div id="parrafoSubtitulo">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad incidunt molestias ea expedita repudiandae qui.
@@ -36,18 +40,28 @@
         <br><br>
     </div> <br><br> <br> <br>
     <h3><b> Algunos trabajos realizados</b></h3>
+    <main>
+        <article>
     <div class="imagenes">
-        <img src="./imagenes/prueba banco.jpg" alt="banco" class="bancoPrueba">
+        <img src="./imagenes/pruebaBanco.jpg" alt="banco" class="bancoPrueba">
         <img src="./imagenes/logo.jpg" alt="logo" class="logo">
         <img src="./imagenes/tablas.jpg" alt="tablas" class="tabla">
         <img src="./imagenes/chulengo.jpg" alt="chulengo" class=" chulengo">
+        </article>
+    </main>
     </div> <br> <br> <br>
     <p id="textoVideo"> Con el siguiente video mostramos un super resumen de algunos trabajos realizados y entregados
     </p> <br> <br>
     <center> <video src="./imagenes/carpincho.mp4" width="800" height="500" controls></video> </center>
 
-pruebaaaaaaaaa
+    <footer >
+        <ul class="social-icon">
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+        </ul>
+    </footer>
 
 </body>
-
+        
 </html>
