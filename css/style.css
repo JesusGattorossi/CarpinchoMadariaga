@@ -23,7 +23,6 @@ head{
 
 .solapa{
     background-image: url("../imagenes/tablas.jpg"); 
-    border: double 15px rgb(224, 15, 15) 5px ;
 }
 h2{
     background-color: rgba(188, 243, 59, 0.8);
@@ -89,43 +88,55 @@ video{
     background-color: antiquewhite ;
 }
 li{
-    
+    color: cyan;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size:  30px;
+    font-size:30px;
+      
 }
-a{
-    color:rgb(8, 39, 218)
+li a:hover{
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkgoldenrod;
+    
 }
+
 .boton :hover{
     border-radius: 15px;
     background-color: aqua;
 }
 footer{
+    background-color: rgb(12, 8, 8);
     position: relative;
     width: 100%;
-   color: rgb(172, 201, 11) ;
     min-height: 100px;
     padding: 20px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 5px 3px 5px;
+    text-shadow: 8px 3px 8px rgb(239, 241, 69);
 }
-.social-icon{
+.social-icon{ 
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    text-align: justify;
     align-items: center;
-    margin: 10px 0;
+    margin: 20px 0;
     flex-wrap: wrap;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:  30px;  
+   
 }
-.social-icon li a{
-    font-size: 2em;
-    color: blue;
-    margin: 0 10px;
+.social-icon span {
+    font-size: 1em;
+    margin: 0 20px;
     display: inline-block;
-    transition: 0.5s;
+    transition:0.5s;    
 }
-.social-icon li a:hover{
-    transform: translateY(-10px);
+a{
+    color: rgb(12, 12, 231);
+}
+.social-icon :hover{
+    color: aliceblue;
+    transform:translateY(-15px);
 }
