@@ -46,6 +46,7 @@ h2{
     border-radius: 20%;
     border:groove blue;
 }
+.bancoPrueba:hover {filter: blur(5px);}
 p{
     font-size: larger;
     font-weight: 400;
@@ -61,11 +62,18 @@ p{
     border-radius: 20%;
     border-color:purple ;
 }
+.tabla:hover  {-webkit-transform:scale(1.3);transform:scale(1.3);}
+
 .chulengo{
     width: 20%;
     border:inset 10px;
 }
-
+.chulengo:hover{
+    -webkit-transform: rotateY(180deg);
+-webkit-transform-style: preserve-3d;
+transform: rotateY(180deg);
+transform-style: preserve-3d;
+}
 h3{ 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size:  40px;
@@ -87,19 +95,17 @@ video{
     font-size: 25px;
     background-color: antiquewhite ;
 }
-li{
+.solapa2{
     color: cyan;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size:30px;
       
 }
-li a:hover{
+.solapa2 a:hover{
     
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: darkgoldenrod;
-    
+    color: darkgoldenrod;  
 }
-
 .boton :hover{
     border-radius: 15px;
     background-color: aqua;
@@ -140,3 +146,40 @@ a{
     color: aliceblue;
     transform:translateY(-15px);
 }
+.carrusel{
+    padding: 50px;
+    display: flex;
+    gap: 10px;
+
+}
+.carrusel ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.carrusel-fotos{
+    display:flex;
+    gap:10px;
+    overflow: auto;
+}
+.carrusel-fotos img{
+    background-color: black;
+    width: 600px;
+    height: 400px;
+    border: 4px solid black;
+    object-fit: contain;
+}
+.carrusel-menu{
+    display:none;
+}
+@media screen and (min-width: 500px) {
+    
+     .carrusel-menu{
+         display: block;
+     }
+     .carrusel-menu img{
+         width: 50px;
+         height: 40px;
+     }
+ }
+     
