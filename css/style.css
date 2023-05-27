@@ -11,7 +11,7 @@ html {
 #titulo1{
     text-shadow:  8px 5px 5px rgb(239, 243, 17);
     border-radius: 20%;
-    font-size: 250%;
+    font-size: 300%;
     background-color: black;
     border: double 15px rgb(206, 109, 30);
     text-align: center;
@@ -127,14 +127,15 @@ footer{
     margin: 20px 0;
     flex-wrap: wrap;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size:  30px;  
+    font-size:  30px; 
+    
    
 }
 .social-icon span {
-    font-size: 1em;
-    margin: 0 20px;
+    font-size: 4em;
+    margin: 0 50px;
     display: inline-block;
-    transition:0.5s;    
+    transition:1.5s;    
 }
 a{
     color: rgb(12, 12, 231);
@@ -207,3 +208,8 @@ a{
     font-size: 40px;
     border-radius: 100%;
 }
+.social-icon p{
+    font-size: 7rem;
+    color: blue;
+}
+@media
