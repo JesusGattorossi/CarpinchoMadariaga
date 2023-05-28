@@ -88,8 +88,8 @@ video{
 #textoVideo{
     color: indigo;
     border: 8px dotted rgb(39, 245, 12);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
+    font-family:sans-serif;
+    font-size: 45px;
     background-color: antiquewhite ;
 }
 .solapa2{
@@ -124,7 +124,7 @@ footer{
     justify-content: space-around;
     text-align: justify;
     align-items: center;
-    margin: 0px 0;
+    margin:  10px;
     flex-wrap: wrap;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size:  30px; 
@@ -132,8 +132,8 @@ footer{
    
 }
 .social-icon span {
-    font-size: 4em;
-    margin: 0 40px;
+    font-size: 4rem;
+    margin:  10px;
     display: inline-block;
     transition:1.5s;    
 }
@@ -142,7 +142,7 @@ a{
 }
 .social-icon p{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 6rem;
+    font-size: 4rem;
     color: blue;
 }
 .social-icon :hover{
@@ -152,7 +152,7 @@ a{
 .carrusel{
     border: solid 10px black;
     background-color: white;
-    padding: 50px;
+    padding: 2px;
     display: flex;
     gap: 10px;
     scroll-snap-type:x mandatory ;
@@ -165,14 +165,17 @@ a{
 }
 .carrusel-fotos{
     display:flex;
-    gap:10px;
+    width: 800%;
+    height: 500%;
+   
+    gap:20px;
     overflow: auto;
 }
 .carrusel-fotos img{
     flex: 0 0 100%;
     background-color: black;
-    width: 500px;
-    height: 400px;
+    width: 50rem;
+    height: 50rem;
     border: 4px solid black;
     object-fit: cover;
     scroll-snap-type: center;
@@ -189,8 +192,8 @@ a{
     font-size: x-large;
 }
 .video{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
 }
 
   
@@ -213,5 +216,9 @@ a{
     font-size: 40px;
     border-radius: 100%;
 }
-
-@media
+@media (max-width :450px){
+    #titulo1{
+        font-size: 100%;
+        border-radius: 10%;
+    }
+}
