@@ -1,6 +1,8 @@
 body{
-    background-color:  rgb(179, 57, 19);
+    background-color: black;
+    width: 100%;
 }
+
 
 h3{text-align: center;
     background-color: rgb(112, 212, 86);
@@ -16,22 +18,22 @@ li{
     border: 8px dashed;
 }
 li:hover{
-    color:rgb(16, 30, 155)
+    color:rgb(24, 206, 48)
 }
 .subtitulo{
     font-size: 29px ;
     border-top: 25%;
-    color: blue;
+    color: rgb(51, 255, 0);
     font-family: sans-serif;
 }
 #insta{
-    width: 3%;
+    width: 8%;
 }
 #face{
-    width: 3%;
+    width: 8%;
 }
 #whatsapp{
-    width: 5%;
+    width: 12%;
 }
 .mapa{
     background-color: brown;
