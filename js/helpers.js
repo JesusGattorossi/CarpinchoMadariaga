@@ -16,12 +16,12 @@
 }
 
 
-/** Recibe un Nº base 1 y devuelve un Nº base 360 */
+
 function probabilidadAGrados(probabiliad){
 	return probabiliad * 360 / 100;
 }
 
-/** Recibe un Nº base 1 y devuelve radianes */
+
 function probabilidadARadianes(probabilidad){
 	return probabilidad/100 * 2 * Math.PI;
 }

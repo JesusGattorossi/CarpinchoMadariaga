@@ -34,22 +34,26 @@ let suma = 0;
 /** Instancias de conceptos que se cargan al iniciar la app */
 const uno = {
 	nombre: "5% descuento",
-	probabilidad:20
+	probabilidad:24
 }
 const dos = {
 	nombre: "10% descuento",
-	probabilidad: 20
+	probabilidad: 21
 }
 const tres = {
 	nombre: "15% descuento",
-	probabilidad: 30
+	probabilidad: 21
 }
 const cuatro = {
 	nombre: "1 TABLA GRATIS!!!",
-	probabilidad: 30
+	probabilidad: 17
+}
+const cinco = {
+	nombre: "segui   participando",
+	probabilidad: 17
 }
 
-let conceptos = [uno,dos,tres,cuatro];
+let conceptos = [uno,dos,tres,cuatro,cinco];
 
 
 /** Pone a girar la ruleta y hace el sorteo del resultado */
@@ -178,51 +182,6 @@ function verificarValidezFormulario(){
 	
 }
 
-// Botón "+" en el formulario de probabilidades
-document.getElementById("agregar").addEventListener("click",() =>{
-	agregarConfiguracionProbabilidad();
-})
-
-function agregarConfiguracionProbabilidad(probabilidad = undefined){
-	const opcionContainer = document.createElement("div");
-	let opcionLabel;
-	const opcionInput = document.createElement("input");
-	const eliminarBoton = document.createElement("button");
-	if(probabilidad){
-		opcionLabel = document.createElement("label");
-		opcionLabel.textContent = probabilidad.nombre;
-		opcionLabel.for = probabilidad.nombre;
-		opcionInput.value = probabilidad.probabilidad;
-		opcionLabel.type = "text";
-	}
-	else {
-		opcionLabel = document.createElement("input");
-	}
-	opcionInput.type = "number";
-	eliminarBoton.textContent = "X"
-	opcionInput.addEventListener("change", ()=> verificarValidezFormulario())
-	opcionContainer.appendChild(opcionLabel);
-	opcionContainer.appendChild(opcionInput);
-	opcionContainer.appendChild(eliminarBoton);
-	formContainer.appendChild(opcionContainer);
-	eliminarBoton.addEventListener("click",(event)=>{
-		event.target.parentNode.parentNode.removeChild(event.target.parentNode); //También puede ser formContainer.removeChild(event.target.parentNode)
-		verificarValidezFormulario();
-	})
-}
-
-
-//Heptágono en Clippy https://bennettfeely.com/clippy/
-//100% 360º - clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0, 50% 50%)
-//87.5 315º - clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 0, 0 0, 50% 50%)
-//75% 270º - clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%)
-//62.5% 225º - clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 100%, 50% 50%)
-//50%	180º - clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 50% 50%)
-//37.5%	135º - clip-path: polygon(50% 0, 100% 0, 100% 100%, 100% 100%, 50% 50%)
-//25%	90º - clip-path: polygon(50% 0, 100% 0, 100% 49%, 50% 50%)
-//12.5%	45º - clip-path: polygon(50% 0, 100% 0, 100% 6%, 50% 50%)
-//1%	3.6º - clip-path: polygon(50% 0, 51% 0, 50% 50%);
-//0%	3.6º - clip-path: polygon(50% 0, 50% 0, 50% 50%);
 
 /** Desde una probabilidad en % devuelve un clip-path que forma el ángulo correspondiente a esa probabilidad */
 function getPosicionParaProbabilidad(probabilidad){
@@ -264,11 +223,7 @@ function getPosicionParaProbabilidad(probabilidad){
 }
 
 
-/** Inicia ejecución */
+
 ajustarRuleta();
 
-/** Cómo dibujar ángulos en CSS */
-// Al final no lo usé.
-// https://stackoverflow.com/questions/21205652/how-to-draw-a-circle-sector-in-css
-// x = cx + r * cos(a)
-// y = cy + r * sin(a)
+
