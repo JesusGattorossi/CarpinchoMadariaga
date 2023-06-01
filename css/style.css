@@ -19,13 +19,13 @@ html {
     color: rgb(9, 9, 238);    
 }
 .solapa{
-    background-image: url("../imagenes/logo.jpg"); 
+    
     width:100%;
 }
 h2{
  
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:60px;
+    font-size:40px;
     border-radius: 10%;
 }
 #parrafoSubtitulo{
@@ -46,9 +46,11 @@ h2{
     border-radius: 20%;
     border:groove blue;
 }
-
+.careta{
+    background-image: url(../imagenes/logo.jpg);
+}
 #careta{
-   width: 25%;
+   width: 35%;
    border:ridge 10px  blue ;
    border-radius: 35%;
    
@@ -102,8 +104,8 @@ video{
     background-color: antiquewhite ;
 }
 .solapa2{
-    color: cyan;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(4, 0, 255);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size:35px;
   
 }
@@ -188,14 +190,35 @@ video{
 }
 @media (max-width :470px){
     #titulo1{
-        font-size: 100%;
+        font-size: 150%;
         border-radius: 10%;
     }
-@media (max-width : 500px){
-    .video{
-        width: 100%;
+}
+
+@media (max-width :650px){
+    .bancoPrueba{
+    width: 80%;
     }
 }
+@media (max-width :650px){
+    .chulengo{
+    width: 80%;
+    }
+}
+@media (max-width :650px){
+    .logo{
+    width: 80%;
+    }
+}
+@media (max-width :650px){
+    .tabla{
+    width: 75%;
+    }
+}
+@media (max-width :650px){
+    #careta{
+        width: 60%;
+    }
 }
 
 /* configuracion*/
