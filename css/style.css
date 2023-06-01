@@ -261,8 +261,6 @@ body{
 	border-radius: 50%;
 	overflow: hidden;
 }
-
-
 #cartelGanador{
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
@@ -321,7 +319,6 @@ body{
 	text-align:center;
 	height: calc(var(--escala) / 2);
 	position: absolute;
-	/*bottom: 80%;*/
 	top: -0%;
 	left: calc(var(--escala) / 4 );
 	transform-origin: bottom center;
@@ -329,7 +326,6 @@ body{
 	text-overflow: clip;
 	pointer-events: none;
 }
-
 .separador{
 	position: absolute;
 	left: calc(var(--escala) / 2 - 1px);
@@ -340,8 +336,6 @@ body{
 	z-index: 1;
 	border-radius: 2px;
 }
-
-
 .girar{
 	animation-name: girar;
 	animation-duration: 5s;
@@ -353,16 +347,12 @@ body{
 	display: flex;
 	flex-direction: column;
 }
-
 #formContainer div{
 	display: flex;
 }
-
 #formContainer div label{
 	margin-right: auto;
 }
-
-
 @keyframes girar {
 	100%{
 		transform: rotate( var(--giroRuleta) );
@@ -380,8 +370,6 @@ h4{
     font-size: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-
 /*config footer*/
 footer{
     box-sizing: border-box;
