@@ -1,4 +1,4 @@
-//Referencias a objetos
+
 const ruleta = document.getElementById("ruleta");
 let opcionesContainer;
 let opciones = Array.from(document.getElementsByClassName("opcion"));
@@ -13,44 +13,41 @@ const ganadorTextoElement = document.getElementById("ganadorTexto");
 
 /** Texto de la opción ganadora */
 let ganador = "";
-/** Para el setInterval que hace que el cartel de ganador anime los "..." */
+
 let animacionCarga;
-/** Estado actual de la ruleta true => Bloquea el mouse; */
+
 let sorteando = false;
-/** Contiene la lista de colores posibles para el gráfico */
+
 const colores=[
 	"126253","134526","C7B446","5D9B9B","8673A1","100000","4C9141","8E402A","231A24","424632","1F3438","025669","008F39","763C28"
 ];
 
-/** Cambia la escala para hacer la herramienta pseudo responsive (faltaría un event listener al cambio de width para que sea bien responsive) */
+/** Cambia la escala para hacer la herramienta pseudo responsive */
 let escala = screen.width < 550 ? screen.width * 0.7 : 400;
 root.style.setProperty("--escala",escala+"px");
 
-/** Contiene la suma actual de probabilidades en base 100 */
-let suma = 0;
 
 
 
-/** Instancias de conceptos que se cargan al iniciar la app */
 const uno = {
 	nombre: "5% descuento",
-	probabilidad:24
+	probabilidad:20
 }
 const dos = {
 	nombre: "10% descuento",
-	probabilidad: 21
+	probabilidad: 22
 }
 const tres = {
 	nombre: "15% descuento",
-	probabilidad: 21
+	probabilidad: 18
 }
 const cuatro = {
-	nombre: "1 TABLA GRATIS!!!",
-	probabilidad: 17
+	nombre:"1 TABLA GRATIS!!",
+	probabilidad: 16
 }
 const cinco = {
-	nombre: "segui   participando",
-	probabilidad: 17
+	nombre:"SEGUI PARTICIPANDO",
+	probabilidad: 24
 }
 
 let conceptos = [uno,dos,tres,cuatro,cinco];
@@ -73,24 +70,24 @@ function sortear(){
 				break;
 		}
 	} ,500)
-	/** Numero del 0 al 1 que contiene al ganador del sorteo */
+
 	const nSorteo = Math.random();
-	/** Cantidad de grados que debe girar la ruleta */
-	const giroRuleta = (1-nSorteo)*360 + 360*10; //10 vueltas + lo aleatorio;
+	
+	const giroRuleta = (1-nSorteo)*360 + 360*10; 
 	root.style.setProperty('--giroRuleta', giroRuleta + "deg");
 	ruleta.classList.toggle("girar",true)
-	/** Acumulador de probabilidad para calcular cuando una probabilidad fue ganadora */
+	
 	let pAcumulada = 0;
 	conceptos.forEach(concepto => {
 		if(nSorteo*100 > pAcumulada && nSorteo*100 <= pAcumulada+concepto.probabilidad){
 			ganador = concepto.nombre;
-			//console.log("Ganador", nSorteo*100, concepto.nombre, "porque está entre ",pAcumulada, "y",pAcumulada+concepto.probabilidad)
+			
 		};
 		pAcumulada +=concepto.probabilidad;
 	})
 }
 
-/** Desacopla lo que ocurre al terminar de girar la ruleta de la función girar */
+
 ruleta.addEventListener("animationend", ()=>{
 	ruleta.style.transform = "rotate("+getCurrentRotation(ruleta)+"deg)";
 		ruleta.classList.toggle("girar",false)
@@ -100,16 +97,16 @@ ruleta.addEventListener("animationend", ()=>{
 })
 
 
-/** Crea todas las partes del elemento ruleta según la lista de conceptos */
+
 function ajustarRuleta (){
-	// Primero borro la ruleta anterior y creo una nueva.
+	
 	if(opcionesContainer)	ruleta.removeChild(opcionesContainer)
 	opcionesContainer = document.createElement("div");
 	opcionesContainer.id = "opcionesContainer";
 	ruleta.appendChild(opcionesContainer);
 	let pAcumulada = 0
 	conceptos.forEach((concepto, i) => {
-		//Creo triangulos de colores
+		
 		const opcionElement = document.createElement("div");
 		opcionElement.classList.toggle("opcion",true);
 		opcionElement.style = `
@@ -118,36 +115,36 @@ function ajustarRuleta (){
 			${getPosicionParaProbabilidad(concepto.probabilidad)}`
 		opcionElement.addEventListener("click", ()=> onOpcionClicked(i))
 		opcionesContainer.appendChild(opcionElement);
-		//Creo textos
+	
 		const nombreElement = document.createElement("p");
 		nombreElement.textContent = concepto.nombre;
 		nombreElement.classList.add("nombre");
 		nombreElement.style = `width : calc(${concepto.probabilidad} * var(--escala) * 1.5 / 80);
 			transform: rotate(${probabilidadAGrados(concepto.probabilidad)/2+probabilidadAGrados(pAcumulada)}deg)`
 		opcionesContainer.appendChild(nombreElement);
-		//Creo separadores
+		
 		const separadorElement = document.createElement("div");
 		separadorElement.style = `transform: rotate(${probabilidadAGrados(pAcumulada)}deg)`
 		separadorElement.classList.add("separador");
 		opcionesContainer.appendChild(separadorElement);
 		pAcumulada += concepto.probabilidad;
-		//Reseteo la posición y el cartel
+		
 		ruleta.style.transform = "rotate(0deg)";
 		ganadorTextoElement.textContent = "¡Click en Girar para iniciar!";
 	})
 }
 
 
-//Eventos de botones
+//CONFIG botones
 
 document.getElementById("sortear").addEventListener("click", () => {
 	if(!sorteando) sortear()
 })
 
 function onOpcionClicked(i){
-	// Borro los elementos de la lista
+
 	Array.from(formContainer.children).forEach(element => formContainer.removeChild(element))
-	// Creo items de lista para cada probabilidad
+	
 	conceptos.forEach(concepto =>{
 		agregarConfiguracionProbabilidad(concepto);
 	})
@@ -171,19 +168,7 @@ botonAceptar.addEventListener("click",()=> {
 	});
 
 
-/** Revisa si  los porcentajes de probabilidades suman a 100% */
-function verificarValidezFormulario(){
-	suma=0;
-	Array.from(formContainer.children).forEach(opcion =>{
-		suma += parseFloat(opcion.children[1].value);
-	})
-	botonAceptar.disabled = suma !== 100; // Deshabilito el botón aceptar si la suma es distinto de 100
-	totalElement.textContent = suma.toString();
-	
-}
 
-
-/** Desde una probabilidad en % devuelve un clip-path que forma el ángulo correspondiente a esa probabilidad */
 function getPosicionParaProbabilidad(probabilidad){
 	if(probabilidad === 100){
 		return ''
@@ -223,10 +208,7 @@ function getPosicionParaProbabilidad(probabilidad){
 }
 
 
-
 ajustarRuleta();
-
-
 
  /** Devuelve la rotación en grados de un elemento */
  function getCurrentRotation(el){
@@ -250,7 +232,6 @@ ajustarRuleta();
   function probabilidadAGrados(probabiliad){
 	  return probabiliad * 360 / 100;
   }
-  
   
   function probabilidadARadianes(probabilidad){
 	  return probabilidad/100 * 2 * Math.PI;

@@ -1,5 +1,5 @@
 html {
-    margin: 1%;
+    margin: 0;
     box-sizing: border-box;
     font-size: 62.5%;  /*1 rem = 10px*/ 
   background-color: black;
@@ -47,7 +47,7 @@ h2{
     border:groove blue;
 }
 .careta{
-    background-image: url(../imagenes/logo.jpg);
+    background-image: url(../img/logo.jpg);
 }
 #careta{
    width: 35%;
@@ -93,7 +93,7 @@ h3{
 }
 
 video{
-    border-radius: 15%;
+    border-radius: 10%;
     border: double rgba(22, 233, 222, 0.603) 25px;
 }
 #textoVideo{
@@ -120,7 +120,7 @@ video{
     background-color: aqua;
 }
 
-
+/*config carrusel*/
 .carrusel{
     border: solid 10px black;
     background-color: white;
@@ -221,7 +221,7 @@ video{
     }
 }
 
-/* configuracion*/
+/* configuracion Ruleta*/
 
 #textoRuleta{
     text-shadow: 8px 3px 8px rgb(239, 241, 69);
@@ -242,14 +242,15 @@ body{
     background: radial-gradient(circle, rgba(230,228,198,1) 4%, rgba(137,191,156,1) 62%, rgb(70, 224, 70) 100%);
 }
 #container{
-	position: relative;
+    
+	position:relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
     box-sizing: border-box;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	text-align: center;
+	text-align:center;
 }
 
 #ruleta{
@@ -262,7 +263,7 @@ body{
 	overflow: hidden;
 }
 #cartelGanador{
-    font-size: large;
+    font-size: 15PX;
     font-family: Arial, Helvetica, sans-serif;
 	position: absolute;
 	left: -150px;
@@ -313,12 +314,12 @@ body{
 
 /* Texto de opcion*/
 .nombre{
-	margin: 0;
+	margin: 1px;
 	padding-top: 40px;
 	color: white;
 	text-align:center;
 	height: calc(var(--escala) / 2);
-	position: absolute;
+	position:absolute;
 	top: -0%;
 	left: calc(var(--escala) / 4 );
 	transform-origin: bottom center;
@@ -345,7 +346,7 @@ body{
 }
 #formContainer{
 	display: flex;
-	flex-direction: column;
+	flex-direction:column-reverse;
 }
 #formContainer div{
 	display: flex;
@@ -415,6 +416,8 @@ a{
 }
 #flecha{
     width: 20%;
+    text-shadow: 8px 3px 8px rgb(239, 241, 69);
+    border-radius: 20%;
 }
 
  
